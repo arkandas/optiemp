@@ -12,10 +12,10 @@ This is an Angular app designed to test some accessibility features of the Clari
 
 ## Screenshots
 
-![Home](./Assets/Screenshots/1_home.png)
-![Explore](./Assets/Screenshots/2_explore.png)
-![Item](./Assets/Screenshots/3_item.png)
-![Stats](./Assets/Screenshots/4_stats.png)
-![Login](./Assets/Screenshots/5_login.png)
-![Profile](./Assets/Screenshots/6_profile.png)
-![Playground](./Assets/Screenshots/7_playground.png)
+![Home](./assets/Screenshots/1_home.png)
+![Explore](./assets/Screenshots/2_explore.png)
+![Item](./assets/Screenshots/3_item.png)
+![Stats](./assets/Screenshots/4_stats.png)
+![Login](./assets/Screenshots/5_login.png)
+![Profile](./assets/Screenshots/6_profile.png)
+![Playground](./assets/Screenshots/7_playground.png)
