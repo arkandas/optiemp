@@ -1,0 +1,334 @@
+<div class="container">
+  <h1 style="border-bottom: 0.0625rem solid #e3dddd;">Component Playground</h1>
+  <div class="playgroundElement">
+    <h2 class="playgroundTitle">Accordion</h2>
+    <p style="margin-top: 0;margin-bottom: 1rem;">An accordion is a collection of vertically stacked sections with
+      multiple content areas which may be expanded or minimized by the user to reveal their content.</p>
+    <clr-accordion style="max-width: 20rem">
+      <clr-accordion-panel>
+        <clr-accordion-title>Item 1</clr-accordion-title>
+        <clr-accordion-content *clrIfExpanded>Content 1</clr-accordion-content>
+      </clr-accordion-panel>
+
+      <clr-accordion-panel>
+        <clr-accordion-title>Item 2</clr-accordion-title>
+        <clr-accordion-content *clrIfExpanded>Content 2</clr-accordion-content>
+      </clr-accordion-panel>
+
+      <clr-accordion-panel>
+        <clr-accordion-title>Item 3</clr-accordion-title>
+        <clr-accordion-content *clrIfExpanded>Content 3</clr-accordion-content>
+      </clr-accordion-panel>
+    </clr-accordion>
+  </div>
+  <div class="playgroundElement">
+    <h2 class="playgroundTitle">Alert</h2>
+    <p style="margin-top: 0;margin-bottom: 1rem; max-width: 50rem;">A standard alert consists of an icon, a message, and
+      optional actions in a container. Left-align the icon and message. Right-aligned the actions.</p>
+    <div class="alert-container" style="max-width: 50rem;">
+      <clr-alert [clrAlertClosable]="false">
+        <clr-alert-item>
+        <span class="alert-text">
+            This alert cannot be dismissed.
+        </span>
+          <div class="alert-actions">
+            <clr-dropdown>
+              <button class="dropdown-toggle" clrDropdownTrigger>
+                Actions
+                <clr-icon shape="caret down"></clr-icon>
+              </button>
+              <clr-dropdown-menu clrPosition="bottom-right">
+                <a href="/home" class="dropdown-item" clrDropdownItem>Shutdown</a>
+                <a href="/home" class="dropdown-item" clrDropdownItem>Delete</a>
+                <a href="/home" class="dropdown-item" clrDropdownItem>Reboot</a>
+              </clr-dropdown-menu>
+            </clr-dropdown>
+          </div>
+        </clr-alert-item>
+      </clr-alert>
+      <clr-alert [clrAlertType]="'warning'">
+        <clr-alert-item>
+        <span class="alert-text">
+            Try closing this alert.
+        </span>
+        </clr-alert-item>
+      </clr-alert>
+    </div>
+
+  </div>
+  <div class="playgroundElement">
+    <h2 class="playgroundTitle">Combobox</h2>
+    <p style="margin-top: 0;margin-bottom: 1rem; max-width: 50rem;">A combobox is a complex element, which can be
+      considered as a combination of two elements - a dropdown list and a text input. The text input is used for quick
+      search and filtering of the predefined options from the dropdown list.</p>
+    <clr-combobox-container>
+      <label>Basic static combobox </label>
+      <clr-combobox [(ngModel)]="selected" name="two" required [disabled]="disabled">
+        <clr-options>
+          <clr-option clrValue="1">1</clr-option>
+          <clr-option clrValue="2">2</clr-option>
+          <clr-option clrValue="3">3</clr-option>
+        </clr-options>
+      </clr-combobox>
+    </clr-combobox-container>
+
+    <clr-combobox-container>
+      <label>Multi selection combobox</label>
+      <clr-combobox [(ngModel)]="selection" name="multiSelect" clrMulti="true" required [disabled]="disabled">
+        <ng-container *clrOptionSelected="let selected">
+          <clr-icon shape="house" role="img" aria-label="welcome home"></clr-icon>
+          {{selected?.name}}
+        </ng-container>
+        <clr-options>
+          <clr-option *clrOptionItems="let state of states; field:'name'" [clrValue]="state">
+            <clr-icon shape="world" role="img" aria-label="World is turning"></clr-icon>
+            {{state.name}}
+            <clr-icon shape="sun" role="img" aria-label="Sun is shining"></clr-icon>
+          </clr-option>
+        </clr-options>
+      </clr-combobox>
+      <clr-control-helper>Favourite State</clr-control-helper>
+      <clr-control-error>There was an error</clr-control-error>
+    </clr-combobox-container>
+
+  </div>
+
+  <div class="playgroundElement">
+
+    <h2 class="playgroundTitle">Date Picker</h2>
+
+    <p style="margin-top: 0;margin-bottom: 1rem; max-width: 50rem;">Date Picker is a popover control for picking a date
+      value for a date input. It's also sometimes referred to as Datepicker.</p>
+
+    <h3>The selected date is: {{basicDate}}</h3>
+
+
+    <form clrForm>
+      <clr-date-container>
+        <label>Basic Demo</label>
+        <input type="date" clrDate name="demo" [(ngModel)]="basicDate">
+      </clr-date-container>
+    </form>
+
+
+    <form clrForm>
+      <clr-date-container>
+        <label>Min date: 2021-11-17 AND Max date: 2021-11-19</label>
+        <input type="date" clrDate name="demo" [(ngModel)]="basicDate" min="2021-11-17" max="2021-11-19">
+      </clr-date-container>
+    </form>
+
+  </div>
+
+
+  <div class="playgroundElement">
+
+    <h2 class="playgroundTitle">Wizard</h2>
+
+    <p style="margin-top: 0;margin-bottom: 1rem; max-width: 50rem;">Wizards provide a way to go through a sequence of
+      steps that form an end to end workflow..</p>
+
+    <button class="btn btn-primary" (click)="lgOpen = true">Open Wizard</button>
+
+    <clr-wizard #wizardlg [(clrWizardOpen)]="lgOpen" clrWizardSize="lg">
+      <clr-wizard-title>Large-Sized Wizard</clr-wizard-title>
+
+      <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+      <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+      <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+      <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+
+      <clr-wizard-page>
+        <ng-template clrPageTitle>Page 1</ng-template>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem
+      </clr-wizard-page>
+
+      <clr-wizard-page>
+        <ng-template clrPageTitle>Page 2</ng-template>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem
+      </clr-wizard-page>
+
+      <clr-wizard-page>
+        <ng-template clrPageTitle>Page 3</ng-template>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem
+      </clr-wizard-page>
+    </clr-wizard>
+
+  </div>
+
+  <div class="playgroundElement">
+
+    <h2 class="playgroundTitle">Tabs</h2>
+
+    <p style="margin-top: 0;margin-bottom: 1rem; max-width: 50rem;">
+      Tabs divide content into separate views which users navigate between.
+    </p>
+
+    <div class="tab-container" style="max-width:50rem;">
+      <clr-tabs>
+        <clr-tab>
+          <button clrTabLink>Dashboard</button>
+          <ng-template [(clrIfActive)]="dashboardActive">
+            <clr-tab-content>
+              <p>Active Tab: <strong>Dashboard</strong></p>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the</p>
+            </clr-tab-content>
+          </ng-template>
+        </clr-tab>
+        <clr-tab>
+          <button clrTabLink>Management</button>
+          <ng-template [(clrIfActive)]="managementActive">
+            <clr-tab-content>
+              <p>Active Tab: <strong>Management</strong></p>
+              <p>t is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. </p>
+            </clr-tab-content>
+          </ng-template>
+        </clr-tab>
+        <clr-tab>
+          <button clrTabLink>Cloud</button>
+          <ng-template [(clrIfActive)]="cloudActive">
+            <clr-tab-content>
+              <p>Active Tab: <strong>Cloud</strong></p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
+            </clr-tab-content>
+          </ng-template>
+        </clr-tab>
+        <clr-tab>
+          <button clrTabLink>Infrastructure</button>
+          <ng-template [(clrIfActive)]="infrastructureActive">
+            <clr-tab-content>
+              <p>Active Tab: <strong>Infrastructure</strong></p>
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour, or randomised words which don't look even slightly
+                believable. </p>
+            </clr-tab-content>
+          </ng-template>
+        </clr-tab>
+      </clr-tabs>
+    </div>
+
+  </div>
+
+  <div class="playgroundElement">
+
+    <h2 class="playgroundTitle">Tree View</h2>
+
+    <p style="margin-top: 0;margin-bottom: 1rem; max-width: 50rem;">
+      A tree is a hierarchical component that shows the visual representation of the parent-child relationship between
+      nodes.
+    </p>
+
+    <div class="tree-view-container">
+      <clr-tree>
+        <clr-tree-node *ngFor="let directory of rootDirectory" [(clrExpanded)]="directory.expanded">
+          <clr-icon [attr.shape]="directory.icon"></clr-icon>
+          {{directory.name}}
+          <clr-tree-node *ngFor="let file of directory.files">
+            <button
+              (click)="openFile(directory.name, file.name)"
+              class="clr-treenode-link"
+              [class.active]="file.active">
+              <clr-icon [attr.shape]="file.icon"></clr-icon>
+              {{file.name}}
+            </button>
+          </clr-tree-node>
+        </clr-tree-node>
+      </clr-tree>
+    </div>
+
+    <clr-modal [(clrModalOpen)]="modalOpened">
+      <h3 class="modal-title">Open File</h3>
+      <div class="modal-body">
+        <p>Directory: <strong>{{modalDirectory}}</strong></p>
+        <p>Opened file: <strong>{{modalFile}}</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="modalOpened = false">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="modalOpened = false">Ok</button>
+      </div>
+    </clr-modal>
+
+  </div>
+
+  <div class="playgroundElement">
+
+    <h2 class="playgroundTitle">Timeline</h2>
+
+    <p style="margin-top: 0;margin-bottom: 1rem; max-width: 50rem;">
+      A timeline displays a series of events which can guide the user through processes or pre-defined steps while also
+      showing current progress.
+    </p>
+
+    <ul class="clr-timeline clr-timeline-vertical">
+      <li class="clr-timeline-step disabled">
+        <div class="clr-timeline-step-header">11:59 am</div>
+        <clr-icon shape="circle" aria-label="Not started"></clr-icon>
+        <div class="clr-timeline-step-body">
+          <span class="clr-timeline-step-title">Add KMS</span>
+          <span class="clr-timeline-step-description">Root CA certificate requested.</span>
+        </div>
+      </li>
+      <li class="clr-timeline-step">
+        <div class="clr-timeline-step-header">11:59 am</div>
+        <clr-icon shape="dot-circle" aria-current="true" aria-label="Current"></clr-icon>
+        <div class="clr-timeline-step-body">
+          <span class="clr-timeline-step-title">Add KMS</span>
+          <span class="clr-timeline-step-description">
+        Root CA certificate requested. Upload it to the KMS to complete the connection.
+        <button class="btn btn-sm">Action</button>
+      </span>
+        </div>
+      </li>
+      <li class="clr-timeline-step">
+        <div class="clr-timeline-step-header">11:59 am</div>
+        <clr-spinner clrMedium aria-label="In progress">Fetching data</clr-spinner>
+        <div class="clr-timeline-step-body">
+          <span class="clr-timeline-step-title">Make vCenter trust KMS</span>
+          <span class="clr-timeline-step-description">
+        Root CA certificate requested. Upload it to the KMS to complete the connection. Third sentence is very long and
+        very long.
+      </span>
+        </div>
+      </li>
+      <li class="clr-timeline-step">
+        <div class="clr-timeline-step-header">11:59 am</div>
+        <clr-icon shape="success-standard" aria-label="Completed"></clr-icon>
+        <div class="clr-timeline-step-body">
+          <span class="clr-timeline-step-title">Make KMS trust vCenter</span>
+          <span class="clr-timeline-step-description"
+          >Upload it to the KMS to complete the connection. Third sentence.
+        <button class="btn btn-sm btn-link">Action</button>
+      </span>
+        </div>
+      </li>
+      <li class="clr-timeline-step">
+        <div class="clr-timeline-step-header">11:59 am</div>
+        <clr-icon shape="error-standard" aria-label="Error"></clr-icon>
+        <div class="clr-timeline-step-body">
+          <span class="clr-timeline-step-title">Connected</span>
+          <span class="clr-timeline-step-description">No. It's not connected.</span>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>
+<app-footer></app-footer>

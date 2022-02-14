@@ -1,0 +1,62 @@
+<div class="container">
+  <clr-alert [clrAlertType]="'info'" [(clrAlertClosed)]="isClosed" style="margin-top: 20px;" role="alert">
+    <clr-alert-item>
+        <span class="alert-text">
+          Pudgy Penguins Pack x{{quantity}}
+          has been added to your cart. Your total is {{totalAmount | number : '1.2-2' }} <i class="fab fa-ethereum"></i>
+        </span>
+    </clr-alert-item>
+  </clr-alert>
+  <div class="grid menu">
+    <div class="clr-col-sm-8 clr-col-md-6">
+      <h1>Item Description</h1>
+    </div>
+  </div>
+  <main>
+    <div class="clr-row product" style="margin-top: 20px;">
+      <div class="clr-col-sm-12 clr-col-md-7">
+        <div class="product-gallery">
+          <div class="product-image">
+            <img class="active" src="../../assets/items/penguin2.png" alt="Penguin">
+          </div>
+          <ul class="image-list">
+            <li class="image-item"><img src="../../assets/items/penguin3.png" alt="Penguin"></li>
+            <li class="image-item"><img src="../../assets/items/penguin4.png" alt="Penguin"></li>
+            <li class="image-item"><img src="../../assets/items/penguin5.png" alt="Penguin"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr-col-sm-12 clr-col-md-5">
+        <h2>Pudgy Penguins Pack</h2>
+        <h2 style="margin-top: 20px;">19.99 <i class="fab fa-ethereum"></i></h2>
+        <div class="description">
+          <p>Located in the freezing cold, arctic region of the metaverse you can find 8,888 cute chubby Pudgy Penguins
+            sliding around on the ETH blockchain.</p>
+          <p>Come join the huddle today at pudgypenguins.io</p>
+        </div>
+        <button class="btn btn-primary" (click)="showAlert()">Add To Cart</button>
+      </div>
+    </div>
+    <div class="clr-row related-products" style="margin-bottom: 50px; margin-top: 30px;">
+      <div class="grid menu clr-col-12" style="margin-bottom: 30px;">
+        <h1>You may also like</h1>
+      </div>
+      <div class="clr-col-12 clr-col-md-4">
+        <img src="../../assets/items/seal1.png" alt="Seal">
+        <h2>Sappy Seals</h2>
+        <p class="price">23.99 <i class="fab fa-ethereum"></i></p>
+      </div>
+      <div class="clr-col-12 clr-col-md-4">
+        <img src="../../assets/items/ape2.png" alt="Ape">
+        <h2>NBAYC</h2>
+        <p class="price">198.99 <i class="fab fa-ethereum"></i></p>
+      </div>
+      <div class="clr-col-12 clr-col-md-4">
+        <img src="../../assets/items/kong2.png" alt="Monkey">
+        <h2>The Meta Kongz</h2>
+        <p class="price">23.49 <i class="fab fa-ethereum"></i></p>
+      </div>
+    </div>
+  </main>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,104 @@
+<div class="login-wrapper" *ngIf="!isLoggedIn">
+  <!--  <form class="login">-->
+  <form
+    name="form"
+    (ngSubmit)="f.form.valid && onSubmit()"
+    #f="ngForm"
+    novalidate
+    class="login">
+
+    <section class="title">
+      <h3 class="welcome">Welcome to</h3>
+      OptiEmporium
+      <h4 class="hint">For this demo, try the username "admin" and the password "admin"</h4>
+    </section>
+
+    <div class="login-group">
+      <!--  Username Input  -->
+      <clr-input-container>
+        <label class="clr-sr-only">Username</label>
+        <input
+          type="text"
+          name="username"
+          clrInput
+          class="clr-input input form-control"
+          placeholder="Username"
+          [(ngModel)]="form.username"
+          required
+          #username="ngModel"
+        />
+      </clr-input-container>
+      <!--  Password Input  -->
+      <clr-password-container>
+        <label class="clr-sr-only">Password</label>
+        <input
+          type="password"
+          name="password"
+          clrPassword
+          class="clr-input input form-control"
+          placeholder="Password"
+          [(ngModel)]="form.password"
+          required
+          minlength="4"
+          #password="ngModel"
+        />
+      </clr-password-container>
+      <!--  Checkbox Input  -->
+      <clr-checkbox-wrapper>
+        <label>Remember me</label>
+        <input type="checkbox" name="rememberMe" clrCheckbox [(ngModel)]="form.rememberMe"/>
+      </clr-checkbox-wrapper>
+
+      <!--  Username Errors -->
+      <div
+        class="error active"
+        role="alert"
+        *ngIf="username.errors && f.submitted" style="margin-top: 3px;"
+      >
+        Username is required!
+      </div>
+      <!--  Password Errors -->
+      <div
+        class="error active"
+        role="alert"
+        *ngIf="password.errors && f.submitted" style="margin-top: 3px;"
+      >
+        <div *ngIf="password.errors.required">Password is required</div>
+        <div *ngIf="password.errors.minlength">
+          Password must be at least 4 characters
+        </div>
+      </div>
+      <!--  Login Errors  -->
+      <div
+        class="error active"
+        role="alert"
+        *ngIf="f.submitted && isLoginFailed"
+      >
+        Login failed: {{ errorMessage }}
+      </div>
+      <!--  Button Input  -->
+      <button type="submit" class="btn btn-primary">NEXT</button>
+    </div>
+  </form>
+</div>
+
+<div class="login-success-container" style="padding: 0 1rem">
+  <div class="card card-container" *ngIf="isLoggedIn">
+    <img
+      id="profile-img2"
+      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+      class="profile-img-card" alt="user profile picture"
+    />
+    <div class="alert alert-success" role="alert" style="margin-top: 2rem;">
+      <div class="alert-items">
+        <div class="alert-item static">
+          <div class="alert-icon-wrapper">
+            <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+          </div>
+          <span class="alert-text">Logged in as {{ username }}.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

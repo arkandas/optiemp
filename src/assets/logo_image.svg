@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="318 259 449 82" width="449" height="82">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="50" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.19.2\n2022-01-07 23:51:08 +0000</metadata>
+  <g id="Canvas_1" fill="none" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill-opacity="1">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_48">
+        <g id="Group_42">
+          <g id="Graphic_43">
+            <title>Rectangle</title>
+            <path d="M 384.45833 259.23993 L 333.57998 259.23993 C 325.2957 259.23993 318.57998 265.95566 318.57998 274.23993 L 318.57998 325.11828 C 318.57998 333.40255 325.2957 340.11828 333.57998 340.11828 L 384.45833 340.11828 C 392.7426 340.11828 399.45833 333.40255 399.45833 325.11828 L 399.45833 274.23993 C 399.45833 265.95566 392.7426 259.23993 384.45833 259.23993 Z" fill="#12232e"/>
+          </g>
+          <g id="Graphic_2">
+            <rect x="400.67418" y="263.65314" width="365.32582" height="72.051935" fill="white"/>
+            <rect x="400.67418" y="263.65314" width="365.32582" height="72.051935" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"/>
+            <text transform="translate(405.6742 268.95393)" fill="white">
+              <tspan font-family="Helvetica Neue" font-size="50" font-weight="700" fill="white" x="4.637918" y="49">OptiEmporium</tspan>
+            </text>
+          </g>
+          <g id="Group_41">
+            <g id="Line_17">
+              <line x1="322.9932" y1="296.50343" x2="359.01915" y2="335.70507" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_16">
+              <line x1="395.0451" y1="296.50343" x2="359.01915" y2="335.70507" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_15">
+              <line x1="322.9932" y1="296.50343" x2="333.3437" y2="287.57966" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_14">
+              <line x1="395.0451" y1="296.50343" x2="384.6946" y2="287.57966" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_13">
+              <line x1="333.54143" y1="287.57966" x2="343.89196" y2="298.73797" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_12">
+              <line x1="384.6946" y1="287.57966" x2="374.34408" y2="298.73797" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_11">
+              <line x1="343.89196" y1="298.73797" x2="374.34408" y2="298.73797" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_10">
+              <line x1="335.24136" y1="281.99383" x2="344.9324" y2="292.03487" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_9">
+              <line x1="383.02813" y1="281.99383" x2="373.3371" y2="292.03487" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_8">
+              <line x1="373.3371" y1="292.03487" x2="344.9324" y2="292.03487" stroke="#ffa45b" stroke-linecap="butt" stroke-linejoin="bevel" stroke-width="3"/>
+            </g>
+            <g id="Line_4">
+              <line x1="343.89196" y1="298.73797" x2="359.01915" y2="335.70507" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_3">
+              <line x1="359.01915" y1="335.70507" x2="374.34408" y2="298.73797" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_37">
+              <path d="M 344.9324 292.03487 L 359.01915 278.22936 L 373.3371 292.03487" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_39">
+              <path d="M 335.24136 281.99383 L 359.3268 263.65314 L 383.02813 281.99383" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+            <g id="Line_40">
+              <line x1="359.01915" y1="278.22936" x2="359.3268" y2="263.65314" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </g>
+        </g>
+        <g id="Group_45">
+          <g id="Graphic_47">
+            <title>Rectangle</title>
+            <path d="M 384.45833 259.23993 L 333.57998 259.23993 C 325.2957 259.23993 318.57998 265.95566 318.57998 274.23993 L 318.57998 325.11828 C 318.57998 333.40255 325.2957 340.11828 333.57998 340.11828 L 384.45833 340.11828 C 392.7426 340.11828 399.45833 333.40255 399.45833 325.11828 L 399.45833 274.23993 C 399.45833 265.95566 392.7426 259.23993 384.45833 259.23993 Z" fill="#3b4244"/>
+          </g>
+          <g id="Graphic_46">
+            <rect x="338.3561" y="279.01604" width="41.326123" height="41.326123" fill="#ffa45b"/>
+            <rect x="338.3561" y="279.01604" width="41.326123" height="41.326123" stroke="white" stroke-linecap="butt" stroke-linejoin="round" stroke-width="13"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

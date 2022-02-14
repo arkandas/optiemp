@@ -1,0 +1,40 @@
+<clr-main-container>
+  <clr-header div class="header header-8">
+    <div class="branding">
+      <a href="/home" class="nav-link">
+        <img src="assets/logo.svg" style="height:1.8rem;width: 1.8rem;margin-right: 0.45rem;" alt="app logo">
+        <span class="title">OptiEmp</span>
+      </a>
+    </div>
+    <div class="header-nav" [clr-nav-level]="1">
+      <a href="/home" [routerLink]="['/home']" routerLinkActive="active" class="nav-link"><span class="nav-text">Dashboard</span></a>
+      <a href="/explore" [routerLink]="['/explore']" routerLinkActive="active" class="nav-link"><span class="nav-text">Explore</span></a>
+      <a href="/stats" [routerLink]="['/stats']" routerLinkActive="active" class="nav-link"><span
+        class="nav-text">Stats</span></a>
+    </div>
+    <div class="header-actions">
+      <!--  User is NOT logged in-->
+      <a href="/login" class="nav-link nav-icon-text" *ngIf="!isLoggedIn">
+        <clr-icon shape="user"></clr-icon>
+        <span class="nav-text">Log In</span>
+      </a>
+      <!--  User IS logged in-->
+      <clr-dropdown class="dropdown bottom-right" *ngIf="isLoggedIn">
+        <button class="nav-text dropdown-toggle" clrDropdownToggle aria-label="toggle settings menu">
+          <p style="color: aliceblue;"> {{email}} </p>
+          <clr-icon shape="angle down"></clr-icon>
+        </button>
+        <clr-dropdown-menu>
+          <a href="/profile" clrDropdownItem>About</a>
+          <a href="/playground" clrDropdownItem>Playground</a>
+          <a clrDropdownItem (click)="logout()">Log out</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+    </div>
+  </clr-header>
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</clr-main-container>

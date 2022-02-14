@@ -1,0 +1,16 @@
+.container {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: 0 1rem;
+}
+
+:host {
+  height: 100%;
+  width: 100%;
+}
+
+.spectre-pie-chart {
+  height: 100%;
+  width: 100%;
+  float: right;
+}

@@ -1,0 +1,182 @@
+<div class="container" style="margin-bottom: 1rem;">
+  <h1 style="border-bottom: 0.0625rem solid #e3dddd;">Statistics</h1>
+  <div class=""></div>
+  <div class="clr-row">
+    <div class="clr-col-lg-4 clr-col-12">
+      <div class="card">
+        <div class="card-block">
+          <h2 class="card-title">Traffic by device</h2>
+          <app-pie-chart></app-pie-chart>
+        </div>
+        <div class="card-footer">
+          <div class="clr-row">
+            <clr-icon shape="sync" size="22" style="margin-left: 20px;"></clr-icon>
+            <span>&nbsp; Updated 4 minutes ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr-col-lg-4 clr-col-12">
+      <div class="card">
+        <div class="card-block">
+          <h2 class="card-title">Web traffic analytics</h2>
+          <app-stacked-area-chart></app-stacked-area-chart>
+        </div>
+        <div class="card-footer">
+          <div class="clr-row">
+            <clr-icon shape="sync" size="22" style="margin-left: 20px;"></clr-icon>
+            <span>&nbsp; Updated 26 minutes ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr-col-lg-4 clr-col-12">
+      <div class="card">
+        <div class="card-block">
+          <h2 class="card-title">Sales by day (<i class="fab fa-ethereum"></i>)</h2>
+          <app-line-chart></app-line-chart>
+        </div>
+        <div class="card-footer">
+          <div class="clr-row">
+            <clr-icon shape="sync" size="22" style="margin-left: 20px;"></clr-icon>
+            <span>&nbsp; Updated 53 minutes ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clr-row">
+    <div class="clr-col-lg-6 clr-col-12">
+      <div class="card">
+        <div class="card-block">
+          <h2 class="card-title">Recent purchases</h2>
+          <p class="card-text">
+          <div style="overflow-x:auto;">
+            <table class="table" aria-label="Recent purchases table">
+              <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Amount</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1434</td>
+                <td>Dakota Rice</td>
+                <td>Niger</td>
+                <td>Oud-Turnhout</td>
+                <td>36.7 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>4342</td>
+                <td>Minerva Hooper</td>
+                <td>Curaçao</td>
+                <td>Sinaai-Waas</td>
+                <td>23.7 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>3434</td>
+                <td>Sage Rodriguez</td>
+                <td>Netherlands</td>
+                <td>Baileux</td>
+                <td>56.1 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>5564</td>
+                <td>Philip Chaney</td>
+                <td>Korea, South</td>
+                <td>Overland Park</td>
+                <td>38.7 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>6565</td>
+                <td>Doris Greene</td>
+                <td>Malawi</td>
+                <td>Feldkirchen in Kärnten</td>
+                <td>63.5 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>3446</td>
+                <td>Mason Porter</td>
+                <td>Chile</td>
+                <td>Santiago</td>
+                <td>78.6 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>5567</td>
+                <td>Azalea Arabella</td>
+                <td>Portugal</td>
+                <td>Gloucester</td>
+                <td>28.3 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>3245</td>
+                <td>Brady Kleio</td>
+                <td>England</td>
+                <td>London</td>
+                <td>98.6 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>7543</td>
+                <td>Aeron Conleth</td>
+                <td>Spain</td>
+                <td>Madrid</td>
+                <td>18.2 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              <tr>
+                <td>12455</td>
+                <td>Jack Flip</td>
+                <td>Greece</td>
+                <td>Athens</td>
+                <td>88.6 <i class="fab fa-ethereum"></i></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer">
+          </div>
+          <div class="clr-row">
+            <clr-icon shape="sync" size="22" style="margin-left: 20px;"></clr-icon>
+            <span>&nbsp; Updated 8 minutes ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr-col-lg-6 clr-col-12">
+      <div class="card">
+        <div class="card-block">
+          <h2 class="card-title">Biggest spenders</h2>
+          <clr-datagrid aria-label="Biggest spenders datagrid">
+            <clr-dg-column>User ID</clr-dg-column>
+            <clr-dg-column [clrDgField]="'name'">Name</clr-dg-column>
+            <clr-dg-column [clrDgField]="'creation'">Registration date</clr-dg-column>
+            <clr-dg-column [clrDgField]="'purchases'">Total purchases</clr-dg-column>
+            <clr-dg-column [clrDgField]="'favorite'">Favorite item</clr-dg-column>
+            <clr-dg-column [clrDgField]="'amount'">Total spent</clr-dg-column>
+            <clr-dg-row *clrDgItems="let user of users">
+              <clr-dg-cell>{{user.id}}</clr-dg-cell>
+              <clr-dg-cell>{{user.name}}</clr-dg-cell>
+              <clr-dg-cell>{{user.creation | date}}</clr-dg-cell>
+              <clr-dg-cell>{{user.purchases}}</clr-dg-cell>
+              <clr-dg-cell>{{user.favorite}}</clr-dg-cell>
+              <clr-dg-cell>{{user.amount}} <i class="fab fa-ethereum"></i></clr-dg-cell>
+            </clr-dg-row>
+            <clr-dg-footer>{{users.length}} users</clr-dg-footer>
+          </clr-datagrid>
+        </div>
+        <div class="card-footer">
+          <div class="clr-row">
+            <clr-icon shape="sync" size="22" style="margin-left: 20px;"></clr-icon>
+            <span>&nbsp; Updated 12 minutes ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

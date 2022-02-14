@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="613 600 109 109" width="109" height="109">
+  <defs/>
+  <metadata> Produced by OmniGraffle 7.19.2\n2022-01-07 23:48:01 +0000</metadata>
+  <g id="Canvas_2" fill="none" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill-opacity="1">
+    <title>Canvas 2</title>
+    <g id="Canvas_2_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_2">
+        <title>Rectangle</title>
+        <path d="M 706.1392 600.5 L 628.5 600.5 C 620.2157 600.5 613.5 607.2157 613.5 615.5 L 613.5 693.1392 C 613.5 701.4234 620.2157 708.1392 628.5 708.1392 L 706.1392 708.1392 C 714.4234 708.1392 721.1392 701.4234 721.1392 693.1392 L 721.1392 615.5 C 721.1392 607.2157 714.4234 600.5 706.1392 600.5 Z" fill="#3b4244"/>
+      </g>
+      <g id="Graphic_63">
+        <rect x="639.8196" y="626.8196" width="55" height="55" fill="#ffa45b"/>
+        <rect x="639.8196" y="626.8196" width="55" height="55" stroke="white" stroke-linecap="butt" stroke-linejoin="round" stroke-width="13"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,232 @@
+<div class="container">
+  <h1 style="border-bottom: 0.0625rem solid #e3dddd;">User Settings</h1>
+  <div class="main-body">
+    <div class="clr-row">
+      <div class="clr-col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="align-items-center text-center">
+              <img src="../../assets/images/{{username}}.png" alt="Admin" class="rounded-circle" width="150">
+              <div style="margin-top:1rem;">
+                <h2>{{fullName}}</h2>
+                <p class="text-secondary" style="margin-bottom: 0.25rem; margin-top: 0;">{{role}}</p>
+                <p class="text-muted" style="margin-bottom: 1rem; margin-top: 0;">{{address}}</p>
+                <button class="btn btn-primary" (click)="openMyModal()">Follow</button>
+                <button class="btn btn-outline-primary" (click)="openMyModal()">Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="clr-row">
+                <div class="clr-col-sm-4">
+                  <h3 style="margin-top: 0.5rem">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-globe icon-inline">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Website
+                  </h3>
+                </div>
+                <div class="clr-col-sm-8 text-secondary">
+                  <p class="text-secondary" style="margin-top: 0.75rem">https://{{username}}.com</p>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="clr-row">
+                <div class="clr-col-sm-4">
+                  <h3 style="margin-top: 0.5rem">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-github icon-inline">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    Github
+                  </h3>
+                </div>
+                <div class="clr-col-sm-8 text-secondary">
+                  <p class="text-secondary" style="margin-top: 0.75rem">{{username}}</p>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="clr-row">
+                <div class="clr-col-sm-4">
+                  <h3 style="margin-top: 0.5rem">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="#18A2B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-twitter icon-inline text-info">
+                      <path
+                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                    Twitter
+                  </h3>
+                </div>
+                <div class="clr-col-sm-8 text-secondary">
+                  <p class="text-secondary" style="margin-top: 0.75rem">@{{username}}</p>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="clr-row">
+                <div class="clr-col-sm-4">
+                  <h3 style="margin-top: 0.5rem">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="#DC3644" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-instagram icon-inline text-danger">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    Instagram
+                  </h3>
+                </div>
+                <div class="clr-col-sm-8 text-secondary">
+                  <p class="text-secondary" style="margin-top: 0.75rem">@{{username}}</p>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="clr-row">
+                <div class="clr-col-sm-4">
+                  <h3 style="margin-top: 0.5rem">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                         stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-facebook icon-inline text-primary">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h3v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                    Facebook
+                  </h3>
+                </div>
+                <div class="clr-col-sm-8 text-secondary">
+                  <p class="text-secondary" style="margin-top: 0.75rem">{{username}}</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr-col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h3 style="font-size: 1.6rem;">About Me</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+              of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+              like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="clr-row">
+              <div class="clr-col-sm-3">
+                <h4 class="mb-0">Full Name</h4>
+              </div>
+              <div class="clr-col-sm-9 text-secondary">
+                <p>{{fullName}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="clr-row">
+              <div class="clr-col-sm-3">
+                <h4 class="mb-0">Email</h4>
+              </div>
+              <div class="clr-col-sm-9 text-secondary">
+                <p>{{userEmail}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="clr-row">
+              <div class="clr-col-sm-3">
+                <h4 class="mb-0">Phone</h4>
+              </div>
+              <div class="clr-col-sm-9 text-secondary">
+                <p>{{phone}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="clr-row">
+              <div class="clr-col-sm-3">
+                <h4 class="mb-0">Mobile</h4>
+              </div>
+              <div class="clr-col-sm-9 text-secondary">
+                <p>{{mobile}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="clr-row">
+              <div class="clr-col-sm-3">
+                <h4 class="">Address</h4>
+              </div>
+              <div class="clr-col-sm-9 text-secondary">
+                <p>{{address}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="clr-row">
+              <div class="clr-col-sm-12">
+                <button class="btn btn-info" (click)="openMyModal()">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clr-col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h1>Skills and Experience</h1>
+            <h2>{{skill1.name}}</h2>
+            <div class="progress-static">
+              <div class="progress-meter" [attr.data-value]="skill1.percentage"></div>
+            </div>
+            <h2>{{skill2.name}}</h2>
+            <div class="progress-static">
+              <div class="progress-meter" [attr.data-value]="skill2.percentage"></div>
+            </div>
+            <h2>{{skill3.name}}</h2>
+            <div class="progress-static danger">
+              <div class="progress-meter" [attr.data-value]="skill3.percentage"></div>
+            </div>
+            <h2>{{skill4.name}}</h2>
+            <div class="progress-static">
+              <div class="progress-meter" [attr.data-value]="skill4.percentage"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <clr-modal [(clrModalOpen)]="openModal">
+      <h3 class="modal-title">Here Be Dragons</h3>
+      <div class="modal-body">
+        <p>This is a test application with no remote backend. Changes will not be persistent.</p>
+        <p></p>
+        <div class="alert alert-danger" role="alert">
+          <div class="alert-items">
+            <div class="alert-item static">
+              <div class="alert-icon-wrapper">
+                <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+              </div>
+              <span class="alert-text">
+            Editing has been disabled.
+          </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="openModal = false">Ok</button>
+      </div>
+    </clr-modal>
+  </div>
+</div>
+<app-footer></app-footer>
