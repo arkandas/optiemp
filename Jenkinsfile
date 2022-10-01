@@ -1,21 +1,44 @@
 pipeline {
-  agent { label "linux" }
+  agent any
+  environment {
+    HOME = '.'
+  }
+  tools {
+   'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
+   nodejs 'node'
+  }
   stages {
-  stage("clean") {
-        steps {
-          sh '''
-            docker rm $(docker stop $(docker ps -a -q --filter ancestor=optiemp --format="{{.ID}}"))
-            docker rmi $(docker images 'optiemp' -a -q)
-            '''
-          }
+    stage("dependencies") {
+      steps {
+        sh '''
+        ls -lsa
+        docker --version
+        node --version
+        npm --version
+        '''
       }
+    }
+    stage("clean") {
+      steps {
+        sh '''
+        if [ $(docker ps -a -q --filter ancestor=optiemp --format="{{.ID}}") ]
+        then
+        echo 'Deleting and removing optiemp containers'
+        docker rm $(docker stop $(docker ps -a -q --filter ancestor=optiemp --format="{{.ID}}"))
+        docker rmi $(docker images 'optiemp' -a -q)
+        fi
+        '''
+      }
+    }
     stage("compile") {
       steps {
         sh '''
-          npm install
-          ng build --prod
-          '''
-        }
+        echo 'Compiling Angular App'
+        npm install
+        npm install @angular/cli
+        npm run ng build --prod
+        '''
+      }
     }
     stage("build") {
       steps {
@@ -24,7 +47,7 @@ pipeline {
     }
     stage("run") {
       steps {
-        sh 'docker run --rm optiemp'
+        sh 'docker run --name optienv -d -p 8010:80 --restart unless-stopped optiemp'
       }
     }
   }
