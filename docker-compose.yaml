@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  optiemp:
+    image: 'optiemp-prod:latest'
+    build:
+      context: ./
+      args:
+        PROFILE: prod
+    container_name: optiemp
+    ports:
+      - '8010:80'
