@@ -1,5 +1,7 @@
 # OptiEmp
 
+[![Build Status](https://jenkins.arkandas.com/buildStatus/icon?job=optiemp%2Fmain)](https://jenkins.arkandas.com/job/optiemp/job/main/)
+
 ## Introduction
 
 OptiEmp is the world's newest and most incredible NFT marketplace!
