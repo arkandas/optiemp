@@ -7,5 +7,6 @@ services:
       args:
         PROFILE: prod
     container_name: optiemp
+    restart: always
     ports:
       - '8010:80'
